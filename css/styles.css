@@ -1,0 +1,104 @@
+:root{
+    --primary-color: hsl(214,84%,65%);
+    --text-color: hsl(0, 0%, 31%);
+    --bg-color:hsl(0, 0%, 90%);
+    --bg-card-color:hsl(0, 0%, 98%);
+    --border-radius:0.44em;
+    --transition:color 0.1s, background-color 0.02s ease-in-out;
+}
+*{
+    box-sizing: border-box;
+}
+a{color:var(--primary-color);
+text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+
+body{
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+body.dark{
+    --text-color: hsl(0, 0%, 83%);
+    --bg-color:hsl(0, 0%, 15%);
+    --bg-card-color:hsl(0, 0%, 20%);
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    height: 75px;
+    padding: 0 1.5em;
+    background-color:var(--bg-card-color);
+}
+.swicthes{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.toggle-theme{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.toggle-theme__icon{
+    margin-right: 0.5em;
+    width: 20px;
+
+}
+.toggle-theme__text {
+    font-size:0.8rem;
+}
+
+.colors{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20px;
+    width: 100px;
+}
+.colors__item{
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--text-color);
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+.colors__item--blue{
+    --primary-color: hsl(214,84%,65%);}
+.colors__item--green{
+    --primary-color: hsl(130, 100%, 51%);}
+.colors__item--purple{
+    --primary-color: hsl(239, 73%, 49%);}
+.colors__item--orange{
+    --primary-color: hsl(27, 100%, 50%);}
+.title{
+    text-align: center;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+.main{
+    display: grid;
+    padding: 2em;
+}
+@media screen and(main-width:720px){
+.main { grid-template-columns: min-content 1fr;
+ }   
+}
+.card{
+    padding: 1em;
+    background-color: var(--bg-card-color);
+    border-radius: var(--border-radius);
+}
+
+.card__image-container{
+    min-width: 320px;
+    border-radius: var(--border-radius);
+}
