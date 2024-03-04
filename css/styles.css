@@ -5,6 +5,7 @@
     --bg-card-color:hsl(0, 0%, 98%);
     --border-radius:0.44em;
     --transition:color 0.1s, background-color 0.02s ease-in-out;
+    --skills-bar-length:0%;
 }
 *{
     box-sizing: border-box;
@@ -91,6 +92,18 @@ body.dark{
     display: grid;
     padding: 2em;
 }
+
+.column{
+    display: grid;
+    gap: 0.5em;
+}
+@media screen and(main-width:720px){
+    .column--right { 
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: repeat(3, min-content);
+     }   
+    }
+
 @media screen and(main-width:720px){
 .main { grid-template-columns: min-content 1fr;
  }   
@@ -123,4 +136,35 @@ body.dark{
 .card__text{
     font-size: 0.9rem;
     line-height: 1.5rem;
+}
+
+.skills{
+    padding: 1em 0;
+}
+.skills__item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.skills__bar, .skills__bar::after{
+    position: relative;
+    width: 175px;
+    height: 8px;
+    background-color: brown;
+    border-radius: var(--border-radius);
+
+}
+.skills__bar::after{
+    content: "";
+    position: absolute;
+    left: -175px;
+    background-color: var(--primary-color);
+    transition: var(--transition);
+}
+.skills__bar--70::after{
+    transform: translate(70%);
+
+}
+.icon {
+    margin-right: 1em;
 }
