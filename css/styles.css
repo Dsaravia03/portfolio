@@ -152,19 +152,61 @@ body.dark{
     height: 8px;
     background-color: brown;
     border-radius: var(--border-radius);
+    overflow: hidden;
 
 }
+
+.skills__bar--10::after{
+    --skills-bar-length:10%;
+}
+.skills__bar--20::after{
+    --skills-bar-length:20%;
+}
+.skills__bar--30::after{
+    --skills-bar-length:30%;
+}
+
+.skills__bar--40::after{
+    --skills-bar-length:40%;
+}
+
+.skills__bar--50::after{
+    --skills-bar-length:50%;
+}
+.skills__bar--60::after{
+    --skills-bar-length:60%;
+}
+.skills__bar--70::after{
+    --skills-bar-length:70%;
+}
+
+.skills__bar--80::after{
+    --skills-bar-length:80%;
+}
+
+.skills__bar--90::after{
+    --skills-bar-length:90%;
+}
+
+.skills__bar--100::after{
+    --skills-bar-length:100%;
+}
+
 .skills__bar::after{
     content: "";
     position: absolute;
     left: -175px;
     background-color: var(--primary-color);
     transition: var(--transition);
+    animation: skills-bar-fill 2s ease-in-out forwards;
 }
-.skills__bar--70::after{
-    transform: translate(70%);
 
-}
+
 .icon {
     margin-right: 1em;
+}
+@keyframes skills-bar-fill{
+to{
+    transform: translate(var(--skills-bar-length));
+}
 }
