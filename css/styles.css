@@ -130,7 +130,11 @@ body.dark{
 .card__title{
     margin: 0;
     font-size: 1.2rem;
+    margin-bottom: 1em;
 
+}
+.no--margin{
+    margin: 0%;
 }
 .card__subtitle{
     font-size: 0.9rem;
@@ -216,6 +220,35 @@ body.dark{
 .skills__tech{
     margin: 0;
     font-size: 0.8rem;
+}
+
+.experience{
+    display: flex;
+    align-items: start;
+    padding-bottom: 1em;
+    padding: 1em;
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    background-color: var(--bg-card-color);
+}
+.experience__image{
+    max-width: 30%;
+    margin-bottom: 3em;
+}
+.experience__time{
+    font-size: 0.9rem;
+    margin-bottom: 3rem;
+}
+.experience__job{
+    margin: 0;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+.experiences__description{
+    font-size: 0.8rem;
+    margin-bottom: 5rem;
 }
 .icon {
     margin-right: 1em;
