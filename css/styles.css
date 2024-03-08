@@ -205,10 +205,7 @@ body.dark{
     font-size: 0.9rem;
     line-height: 1.5rem;
 }
-@media screen and (min-width: 760px){
-
-
-
+@media screen and (min-width: 760px){}
 @media screen and (min-width:720px){   
 .card--project{
     display: grid;
@@ -234,6 +231,27 @@ body.dark{
     margin: 0.5em 0;
     font-size: 0.6rem;
     width: 275px;
+}
+.buttons{
+    display: flex;
+    justify-content: start;
+    width: 225px;
+}
+.button{
+    width: 100px;
+    line-height: 2.5;
+    text-align: center;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    color: var(--bg-color);
+}
+.button--primary{
+    
+    color: var(--bg-color);
+}
+.button--ghost{
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
 }
 .project__tag{
     padding: 0.4em 0.8em;
