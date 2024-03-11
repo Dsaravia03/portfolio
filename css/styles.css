@@ -255,6 +255,8 @@ body.dark{
     border-radius: var(--border-radius);
     background-color: var(--primary-color);
     color: var(--bg-color);
+    text-align: center;
+    margin: 1.1rem;
 }
 
 .skills{
